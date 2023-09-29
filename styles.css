@@ -1,32 +1,44 @@
 /* Flexbox Part 1 */
 
+/* Is the border in the reference 'bold-ish' because it's an image? 
+Not sure if I should update the container. Leaving it as is for now */
+
 #flex-section1 ul {
-
-}
-
+	list-style-type: none;
+	font-size: 18px;
+	margin: 0;
+ 	padding: 0;
+	display: flex;
+	justify-content: space-evenly;
+} 
 /* end Flexbox Part 1 */
 
 
 /* Flexbox Part 2 */
 
 #flex-section2 ul {
-
+	list-style-type: none;
+	margin: 0;
+ 	padding: 0;
+	display: flex;
 }
 
 #flex-section2 li {
-
+	flex-basis: 100%;
+	/* I cannot match the font weight for the life of me :(. 
+	Again, is it because the reference is an image from a different system? */
 }
 
 #flex-section2 .item1 {
-
+	order: 1;
 }
 
 #flex-section2 .item2 {
-
+	order: 3;
 }
 
 #flex-section2 .item3 {
-
+	order: 2;
 }
 
 /* end Flexbox Part 2 */
@@ -35,11 +47,19 @@
 /* Flexbox Part 3 */
 
 #flex-section3 .box {
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
 
 }
 
 #flex-section3 .tags ul {
-
+	display: flex;
+	list-style-type: none;
+	flex-wrap: wrap;
+	padding-left: 0%;
+	margin-top: 0%;
+	margin-bottom: 0%;
 }
 
 /* end Flexbox Part 3 */
@@ -48,7 +68,12 @@
 /* Grid Part 1 */
 
 #grid-section1 .grid {
-
+	display: grid;
+	grid-row: 4;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 100px 100px;
+	text-align: left;
+	gap: 20px;
 }
 
 /* end Grid Part 1 */
@@ -57,11 +82,19 @@
 /* Grid Part 2 */
 
 #grid-section2 .gridboxblue {
+	grid-column-start: 2;
+  	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 4;
+	z-index: 1;
 
 }
 
 #grid-section2 .gridboxred {
-
+	grid-column-start: 1;
+  	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
 }
 
 /* end Grid Part 2 */
@@ -70,11 +103,15 @@
 /* Grid Part 3 */
 
 #grid-section3 .grid {
-
+	display: grid;
+	grid-template-rows: 100px 300px 100px;
+	grid-template-columns: 2fr 1fr;
+	gap: 10px;
 }
 
 #grid-section3 .box1 {
-
+	grid-column-start: 1;
+  	grid-column-end: 3;
 }
 
 #grid-section3 .box2 {
@@ -86,7 +123,8 @@
 }
 
 #grid-section3 .box4 {
-
+	grid-column-start: 1;
+  	grid-column-end: 3;
 }
 
 /* end Grid Part 3 */
@@ -94,21 +132,21 @@
 
 /* Transition Part */
 
+/* The quesiton mentions "3 section". I'm assuming it's a typo for 3 seconds */
+
 #transition-section .box a {
 	display: inline-block;
 	background-color: #ccc;
 	color: #000;
 	padding: 20px;
 	text-decoration: none;
-
-
+	transition: all 3s ease-in-out;
 }
 
 #transition-section .box a:hover {
 	background-color: #cc0000;
 	color: #fff;
-
-
+	transition: all 0.5s ease-in-out;
 }
 
 /* end Transition Part */
